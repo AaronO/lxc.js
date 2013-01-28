@@ -17,9 +17,9 @@
         "execute": "lxc-execute"
     },
 
-    "baseDir": "/var/lib/lxc/",
+    "baseDirectory": "/var/lib/lxc/",
 
-    "argMappings": {
+    "argumentMappings": {
         "base": {
             "name": "-n"
         },
@@ -34,7 +34,7 @@
         }
     },
 
-    "arguments": {
+    "defaultArguments": {
         "start": {
             "daemon": true
         },
