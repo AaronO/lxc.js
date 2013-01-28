@@ -23,8 +23,10 @@
         "base": {
             "name": "-n"
         },
+        "create": {
+            "template": "-t"
+        },
         "start": {
-            "type": "-t",
             "daemon": "-d"
         },
         "execute": {
@@ -34,8 +36,10 @@
 
     "arguments": {
         "start": {
-            "daemon": true,
-            "type": "ubuntu-cloud"
+            "daemon": true
+        },
+        "create": {
+            "template": "ubuntu-cloud"
         }
     }
 }
