@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Check JSON and JS files are valid (parsable)
+exec find . -name "*.json" -o -name "*.js" | xargs node
+
+# Exiting
+if [ $? -eq 0 ]
+then
+echo "Good"
+exit 0
+else
+echo "Bad"
+exit 1
+fi
