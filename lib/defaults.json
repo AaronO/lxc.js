@@ -21,7 +21,7 @@
 
     "argMappings": {
         "base": {
-            "name": "-n",
+            "name": "-n"
         },
         "start": {
             "type": "-t",
