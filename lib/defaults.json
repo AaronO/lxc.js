@@ -13,7 +13,7 @@
         "halt": "lxc-halt",
         "shutdown": "lxc-shutdown",
         "destroy": "lxc-destroy",
-        "startEphimerial": "lxc-start-ephimerial",
+        "startEphemeral": "lxc-start-ephemeral",
         "execute": "lxc-execute"
     },
 
