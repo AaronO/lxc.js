@@ -14,7 +14,7 @@
         "shutdown": "lxc-shutdown",
         "destroy": "lxc-destroy",
         "startEphimerial": "lxc-start-ephimerial",
-        "destroy": "lxc-destroy",
+        "execute": "lxc-execute"
     },
 
     "baseDir": "/var/lib/lxc/",
@@ -26,6 +26,9 @@
         "start": {
             "type": "-t",
             "daemon": "-d"
+        },
+        "execute": {
+            "command": ""
         }
     },
 
