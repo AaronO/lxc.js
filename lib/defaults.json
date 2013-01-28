@@ -1,0 +1,38 @@
+{
+    "states": [
+        "RUNNING",
+        "FROZEN",
+        "STOPPED"
+    ],
+
+    "commands": {
+        "create": "lxc-create",
+        "start": "lxc-start",
+        "freeze": "lxc-freeze",
+        "unfreeze": "lxc-unfreeze",
+        "halt": "lxc-halt",
+        "shutdown": "lxc-shutdown",
+        "destroy": "lxc-destroy",
+        "startEphimerial": "lxc-start-ephimerial",
+        "destroy": "lxc-destroy",
+    },
+
+    "baseDir": "/var/lib/lxc/",
+
+    "argMappings": {
+        "base": {
+            "name": "-n",
+        },
+        "start": {
+            "type": "-t",
+            "daemon": "-d"
+        }
+    },
+
+    "arguments": {
+        "start": {
+            "daemon": true,
+            "type": "ubuntu-cloud"
+        }
+    }
+}
