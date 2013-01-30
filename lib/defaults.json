@@ -17,7 +17,7 @@
         "execute": "lxc-execute"
     },
 
-    "baseDirectory": "/var/lib/lxc/",
+    "baseDirectory  ": "/var/lib/lxc/",
 
     "argumentMappings": {
         "base": {
@@ -30,7 +30,7 @@
             "daemon": "-d"
         },
         "execute": {
-            "command": ""
+            "command": "--"
         }
     },
 
@@ -41,5 +41,9 @@
         "create": {
             "template": "ubuntu-cloud"
         }
+    },
+
+    "argumentOrder": {
+        "execute": ["name", "command"]
     }
 }
