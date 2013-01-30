@@ -17,7 +17,12 @@
         "execute": "lxc-execute"
     },
 
-    "baseDirectory  ": "/var/lib/lxc/",
+    "paths": {
+        "base": "/var/lib/lxc/",
+        "rootfs": "rootfs",
+        "config": "config",
+        "fstab": "fstab"
+    },
 
     "argumentMappings": {
         "base": {
