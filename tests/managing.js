@@ -10,6 +10,11 @@ var vmData = {
     command: "echo hipsters" // Will only be used by .execute
 };
 
+function tap() {
+    console.log(arguments);
+    return this;
+}
+
 
 lxc.exists(vmId)
 .then(function(exists) {
@@ -18,26 +23,26 @@ lxc.exists(vmId)
         return lxc.destroy(vmData);
     }
 })
-.tap(console.log)
+.then(tap)
 .then(function() {
     return lxc.create(vmData);
 })
-.tap(console.log)
+.then(tap)
 .then(function() {
     return lxc.start(vmData);
 })
-.tap(console.log)
+.then(tap)
 .then(lxc.list)
-.tap(console.log)
+.then(tap)
 .delay(30000) // Wait till booted
 .then(function() {
     return lxc.execute(vmData);
 })
-.tap(console.log)
+.then(tap)
 .then(function() {
     return lxc.destory(vmData);
 })
-.tap(console.log)
+.then(tap)
 .then(function() {
     console.log("Everything went as planned");
 })
