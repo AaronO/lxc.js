@@ -4,10 +4,8 @@ var defaults = require('../lib/defaults.json');
 
 
 // Our VM data
-var vmId = 'blabla';
 var vmData = {
-    name: vmId,
-    command: "echo hipsters" // Will only be used by .execute
+    name: 'blabla'
 };
 
 function tap() {
@@ -34,9 +32,8 @@ lxc.exists(vmId)
 .then(tap)
 .then(lxc.list)
 .then(tap)
-.delay(30000) // Wait till booted
 .then(function() {
-    return lxc.execute(vmData);
+    return lxc.shutdown(vmData);
 })
 .then(tap)
 .then(function() {
