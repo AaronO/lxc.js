@@ -12,6 +12,7 @@ var vmData = {
 
 lxc.exists(vmData)
 .then(function(exists) {
+    console.log('Exists = ', exists);
     if(exists) {
         return lxc.destroy(vmData);
     }
