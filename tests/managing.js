@@ -25,11 +25,17 @@ lxc.exists(vmData)
 .then(function() {
     return lxc.list().then(console.log).fail(console.log);
  })
-//.delay(10000)
+.delay(10000) // Wait till booted
 .then(function() {
     return lxc.execute(vmData);
 })
 .then(function() {
     return lxc.destory(vmData);
 })
-.fail(console.log);
+.then(function() {
+    console.log("Everything went as planned");
+})
+.fail(function() {
+    console.log("You have failed this City !!!");
+    console.log.apply(null, arguments);
+});
