@@ -4,13 +4,14 @@ var defaults = require('../lib/defaults.json');
 
 
 // Our VM data
+var vmId = 'blabla';
 var vmData = {
-    name: "blabla",
+    name: vmId,
     command: "echo hipsters" // Will only be used by .execute
 };
 
 
-lxc.exists(vmData)
+lxc.exists(vmId)
 .then(function(exists) {
     console.log('Exists = ', exists);
     if(exists) {
