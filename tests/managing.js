@@ -18,22 +18,26 @@ lxc.exists(vmId)
         return lxc.destroy(vmData);
     }
 })
+.tap(console.log)
 .then(function() {
     return lxc.create(vmData);
 })
+.tap(console.log)
 .then(function() {
     return lxc.start(vmData);
 })
-.then(function() {
-    return lxc.list().then(console.log).fail(console.log);
- })
+.tap(console.log)
+.then(lxc.list)
+.tap(console.log)
 .delay(30000) // Wait till booted
 .then(function() {
     return lxc.execute(vmData);
 })
+.tap(console.log)
 .then(function() {
     return lxc.destory(vmData);
 })
+.tap(console.log)
 .then(function() {
     console.log("Everything went as planned");
 })
