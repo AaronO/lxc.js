@@ -27,7 +27,7 @@ lxc.exists(vmId)
 .then(function() {
     return lxc.list().then(console.log).fail(console.log);
  })
-.delay(10000) // Wait till booted
+.delay(30000) // Wait till booted
 .then(function() {
     return lxc.execute(vmData);
 })
