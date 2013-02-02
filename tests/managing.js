@@ -1,6 +1,6 @@
 var Q = require('q');
-var lxc = require('./lib/lxc.js').lxc;
-var defaults = require('./lib/defaults.json');
+var lxc = require('../lib/lxc.js').lxc;
+var defaults = require('../lib/defaults.json');
 
 
 // Our VM data
