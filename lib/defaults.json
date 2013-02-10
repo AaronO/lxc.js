@@ -14,7 +14,11 @@
         "shutdown": "lxc-shutdown",
         "destroy": "lxc-destroy",
         "startEphemeral": "lxc-start-ephemeral",
-        "execute": "lxc-execute"
+        "execute": "lxc-execute",
+        "netstat": "lxc-netstat",
+        "ps": "lxc-ps",
+
+        "monitor": "lxc-monitor"
     },
 
     "paths": {
@@ -24,31 +28,33 @@
         "fstab": "fstab"
     },
 
-    "argumentMappings": {
-        "base": {
-            "name": "-n"
+    "args": {
+        "mappings": {
+            "base": {
+                "name": "-n"
+            },
+            "create": {
+                "template": "-t"
+            },
+            "start": {
+                "daemon": "-d"
+            },
+            "execute": {
+                "command": "--"
+            }
         },
-        "create": {
-            "template": "-t"
-        },
-        "start": {
-            "daemon": "-d"
-        },
-        "execute": {
-            "command": "--"
-        }
-    },
 
-    "defaultArguments": {
-        "start": {
-            "daemon": true
+        "defaults": {
+            "start": {
+                "daemon": true
+            },
+            "create": {
+                "template": "ubuntu-cloud"
+            }
         },
-        "create": {
-            "template": "ubuntu-cloud"
-        }
-    },
 
-    "argumentOrder": {
-        "execute": ["name", "command"]
+        "order": {
+            "execute": ["name", "command"]
+        }
     }
 }
