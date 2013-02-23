@@ -43,7 +43,8 @@
                 "command": "--"
             },
             "startEphemeral": {
-                "origin": "-o"
+                "origin": "-o",
+                "bind": "-b"
             },
             "destroy": {
                 "force": "-f"
