@@ -11,6 +11,7 @@
         "freeze": "lxc-freeze",
         "unfreeze": "lxc-unfreeze",
         "halt": "lxc-halt",
+        "reboot": "lxc-halt",
         "shutdown": "lxc-shutdown",
         "destroy": "lxc-destroy",
         "startEphemeral": "lxc-start-ephemeral",
@@ -53,6 +54,10 @@
                 "wait": "-w",
                 "reboot": "-r",
                 "timeout": "-t"
+            },
+            "reboot": {
+                "reboot": "-r",
+                "timeout": "-t"
             }
         },
 
@@ -67,6 +72,10 @@
                 "force": true
             },
             "shutdown": {
+                "timeout": "now"
+            },
+            "reboot": {
+                "reboot": true,
                 "timeout": "now"
             }
         },
