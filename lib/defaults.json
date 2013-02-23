@@ -41,6 +41,12 @@
             },
             "execute": {
                 "command": "--"
+            },
+            "startEphemeral": {
+                "origin": "-o"
+            },
+            "destroy": {
+                "force": "-f"
             }
         },
 
@@ -50,11 +56,23 @@
             },
             "create": {
                 "template": "ubuntu-cloud"
+            },
+            "destroy": {
+                "force": true
             }
         },
 
         "order": {
+            "start": ["name", "command"],
+            "startEphemeral": ["name", "command"],
             "execute": ["name", "command"]
+        }
+    },
+
+    "limits": {
+        "mappings": {
+            "memory": "lxc.cgroup.memory.limit_in_bytes",
+            "swap": "lxc.cgroup.memory.memsw.limit_in_bytes"
         }
     }
 }

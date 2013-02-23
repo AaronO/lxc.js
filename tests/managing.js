@@ -4,8 +4,9 @@ var defaults = require('../lib/defaults.json');
 
 
 // Our VM data
+var vmId = 'blabla';
 var vmData = {
-    name: 'blabla'
+    name: vmId
 };
 
 function tap() {
