@@ -48,6 +48,11 @@
             },
             "destroy": {
                 "force": "-f"
+            },
+            "shutdown": {
+                "wait": "-w",
+                "reboot": "-r",
+                "timeout": "-t"
             }
         },
 
@@ -60,6 +65,9 @@
             },
             "destroy": {
                 "force": true
+            },
+            "shutdown": {
+                "timeout": "now"
             }
         },
 
