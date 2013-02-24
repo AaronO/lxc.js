@@ -13,7 +13,7 @@ lxc.all().then(function (instances) {
             name: instance
         })
         .then(function() {
-            console.log('Destryed', instance);
+            console.log('Destroyed', instance);
         })
         .fail(function() {
             console.log('Failed', instance);
