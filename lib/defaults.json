@@ -45,7 +45,8 @@
             },
             "startEphemeral": {
                 "origin": "-o",
-                "bind": "-b"
+                "bind": "-b",
+                "daemon": "-d"
             },
             "destroy": {
                 "force": "-f"
@@ -63,6 +64,9 @@
 
         "defaults": {
             "start": {
+                "daemon": true
+            },
+            "startEphemeral": {
                 "daemon": true
             },
             "create": {
