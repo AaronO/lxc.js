@@ -86,7 +86,7 @@
 
         "order": {
             "start": ["name", "command"],
-            "startEphemeral": ["name", "command"],
+            "startEphemeral": ["origin", "bind", "daemon", "command"],
             "execute": ["name", "command"]
         }
     },
