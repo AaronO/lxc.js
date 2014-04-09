@@ -15,10 +15,6 @@
         "underscore": "1.4.2",
         "q": "0.8.9"
     },
-    "engines" : {
-        "node" : "0.8.x"
-    },
-    "engineStrict": true,
     "author" : {
         "name" : "Aaron O'Mullan",
         "email" : "aaron.omullan@gmail.com",
